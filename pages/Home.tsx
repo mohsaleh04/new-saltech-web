@@ -1,44 +1,44 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import { Layout, Smartphone, Globe, Cloud, ChevronRight, Star } from 'lucide-react';
+import { Smartphone, Globe, Cloud, ChevronLeft, Star } from 'lucide-react';
 import { Service } from '../types';
 import { motion } from 'framer-motion';
 
 const services: Service[] = [
   {
     id: '1',
-    title: 'Web Development',
-    description: 'Responsive, high-performance websites utilizing React, Next.js, and modern frameworks tailored to your brand.',
+    title: 'توسعه وب',
+    description: 'وب‌سایت‌های واکنش‌گرا و پرسرعت با استفاده از React، Next.js و فریم‌ورک‌های مدرن، متناسب با برند شما.',
     icon: 'globe'
   },
   {
     id: '2',
-    title: 'Mobile Solutions',
-    description: 'Native and cross-platform mobile applications for iOS and Android that deliver seamless user experiences.',
+    title: 'راهکارهای موبایل',
+    description: 'اپلیکیشن‌های موبایل نیتیو و کراس‌پلتفرم برای iOS و اندروید که تجربه کاربری بی‌نظیری ارائه می‌دهند.',
     icon: 'smartphone'
   },
   {
     id: '3',
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud architecture design, migration, and management on AWS, Azure, or Google Cloud.',
+    title: 'زیرساخت ابری',
+    description: 'طراحی معماری ابری مقیاس‌پذیر، مهاجرت به ابر و مدیریت سرورها روی زیرساخت‌های مطمئن.',
     icon: 'cloud'
   }
 ];
 
 const projects = [
   {
-    title: 'FinCore Dashboard',
-    category: 'FinTech',
+    title: 'داشبورد فین‌کور',
+    category: 'فین‌تک',
     image: 'https://picsum.photos/600/400?random=1',
   },
   {
-    title: 'MediSync App',
-    category: 'Healthcare',
+    title: 'اپلیکیشن مدی‌سینک',
+    category: 'سلامت',
     image: 'https://picsum.photos/600/400?random=2',
   },
   {
-    title: 'Urban Logistics',
-    category: 'Supply Chain',
+    title: 'لجستیک شهری',
+    category: 'زنجیره تامین',
     image: 'https://picsum.photos/600/400?random=3',
   }
 ];
@@ -52,9 +52,9 @@ const Home: React.FC = () => {
       <section className="py-24 bg-primary relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-base text-accent font-semibold tracking-wide uppercase mb-2">Our Expertise</h2>
-            <p className="text-3xl md:text-4xl font-bold text-white mb-4">Comprehensive Tech Solutions</p>
-            <p className="text-gray-400 max-w-2xl mx-auto">We leverage the latest technologies to build scalable, secure, and user-centric digital products.</p>
+            <h2 className="text-base text-accent font-semibold tracking-wide uppercase mb-2">تخصص ما</h2>
+            <p className="text-3xl md:text-4xl font-bold text-white mb-4">راهکارهای جامع تکنولوژی</p>
+            <p className="text-gray-400 max-w-2xl mx-auto">ما از جدیدترین فناوری‌ها برای ساخت محصولات دیجیتال امن، مقیاس‌پذیر و کاربرمحور استفاده می‌کنیم.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -77,7 +77,7 @@ const Home: React.FC = () => {
                   {service.description}
                 </p>
                 <a href="#" className="inline-flex items-center text-accent hover:text-white transition-colors text-sm font-medium">
-                  Learn more <ChevronRight className="ml-1 h-4 w-4" />
+                  بیشتر بدانید <ChevronLeft className="mr-1 h-4 w-4" />
                 </a>
               </motion.div>
             ))}
@@ -90,11 +90,11 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="flex justify-between items-end mb-12">
              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Featured Projects</h2>
-                <p className="text-gray-400">A selection of our recent work.</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">پروژه‌های منتخب</h2>
+                <p className="text-gray-400">گزیده‌ای از کارهای اخیر ما.</p>
              </div>
              <a href="#" className="hidden md:flex items-center text-white hover:text-accent transition-colors">
-               View all projects <ChevronRight className="ml-1 h-5 w-5" />
+               مشاهده همه پروژه‌ها <ChevronLeft className="mr-1 h-5 w-5" />
              </a>
            </div>
 
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
            
            <div className="mt-8 md:hidden text-center">
              <a href="#" className="inline-flex items-center text-white hover:text-accent transition-colors">
-               View all projects <ChevronRight className="ml-1 h-5 w-5" />
+               مشاهده همه پروژه‌ها <ChevronLeft className="mr-1 h-5 w-5" />
              </a>
            </div>
         </div>
@@ -126,19 +126,19 @@ const Home: React.FC = () => {
       <section className="py-24 bg-primary relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white">Trusted by Industry Leaders</h2>
+            <h2 className="text-3xl font-bold text-white">مورد اعتماد رهبران صنعت</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
              <div className="bg-white/5 p-8 rounded-2xl border border-white/5 relative">
                <div className="flex text-yellow-500 mb-4">
                  {[...Array(5)].map((_,i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                </div>
-               <p className="text-gray-300 italic mb-6">"SalTech completely transformed our digital infrastructure. Their team is incredibly skilled, responsive, and forward-thinking."</p>
+               <p className="text-gray-300 italic mb-6">"صالتک زیرساخت دیجیتال ما را کاملاً متحول کرد. تیم آن‌ها فوق‌العاده ماهر، پاسخگو و آینده‌نگر است."</p>
                <div className="flex items-center">
-                 <img src="https://picsum.photos/100/100?random=10" alt="Client" className="w-10 h-10 rounded-full mr-4" />
+                 <img src="https://picsum.photos/100/100?random=10" alt="Client" className="w-10 h-10 rounded-full ml-4" />
                  <div>
-                   <h4 className="text-white font-semibold text-sm">Sarah Johnson</h4>
-                   <p className="text-gray-500 text-xs">CTO, TechFlow</p>
+                   <h4 className="text-white font-semibold text-sm">سارا رضایی</h4>
+                   <p className="text-gray-500 text-xs">مدیر فنی، تک‌فلو</p>
                  </div>
                </div>
              </div>
@@ -146,12 +146,12 @@ const Home: React.FC = () => {
                <div className="flex text-yellow-500 mb-4">
                  {[...Array(5)].map((_,i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                </div>
-               <p className="text-gray-300 italic mb-6">"The AI integration they built for our customer service reduced response times by 60%. Absolutely game-changing."</p>
+               <p className="text-gray-300 italic mb-6">"یکپارچه‌سازی هوش مصنوعی که برای خدمات مشتریان ما انجام دادند، زمان پاسخگویی را ۶۰٪ کاهش داد. واقعاً تغییر بزرگی بود."</p>
                <div className="flex items-center">
-                 <img src="https://picsum.photos/100/100?random=11" alt="Client" className="w-10 h-10 rounded-full mr-4" />
+                 <img src="https://picsum.photos/100/100?random=11" alt="Client" className="w-10 h-10 rounded-full ml-4" />
                  <div>
-                   <h4 className="text-white font-semibold text-sm">David Chen</h4>
-                   <p className="text-gray-500 text-xs">Founder, StartUp Inc</p>
+                   <h4 className="text-white font-semibold text-sm">دیوید چن</h4>
+                   <p className="text-gray-500 text-xs">بنیان‌گذار، استارتاپ اینک</p>
                  </div>
                </div>
              </div>
@@ -163,10 +163,10 @@ const Home: React.FC = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-accent/10"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
-           <h2 className="text-4xl font-bold text-white mb-6">Ready to elevate your business?</h2>
-           <p className="text-xl text-gray-300 mb-8">Let's discuss how SalTech can help you achieve your digital goals.</p>
+           <h2 className="text-4xl font-bold text-white mb-6">آماده ارتقای کسب‌وکار خود هستید؟</h2>
+           <p className="text-xl text-gray-300 mb-8">بیایید درباره اینکه صالتک چطور می‌تواند به شما در رسیدن به اهداف دیجیتالتان کمک کند، صحبت کنیم.</p>
            <a href="/#/contact" className="inline-block px-10 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-colors shadow-xl">
-             Schedule a Consultation
+             دریافت مشاوره
            </a>
         </div>
       </section>

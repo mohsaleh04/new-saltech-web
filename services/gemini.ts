@@ -4,20 +4,21 @@ import { GoogleGenAI } from "@google/genai";
 // It acts as a sales/support agent for the website.
 
 const SYSTEM_INSTRUCTION = `
-You are "Sal", the AI virtual assistant for SalTech.
-SalTech is a premier technology solutions provider specializing in:
-1. Custom Software Development
-2. Mobile App Development (iOS & Android)
-3. Cloud Infrastructure & DevOps
-4. Artificial Intelligence & Machine Learning Solutions
-5. Cybersecurity Audits
-6. Digital Transformation Consulting
+شما "صال" هستید، دستیار هوشمند مجازی صالتک (SalTech).
+صالتک یک ارائه دهنده پیشرو راهکارهای فناوری است که در زمینه‌های زیر تخصص دارد:
+1. توسعه نرم‌افزار سفارشی
+2. طراحی اپلیکیشن موبایل (iOS و Android)
+3. زیرساخت ابری و DevOps
+4. راهکارهای هوش مصنوعی و یادگیری ماشین
+5. ممیزی و امنیت سایبری
+6. مشاوره تحول دیجیتال
 
-Your goal is to be helpful, professional, and concise.
-Answer questions about SalTech's services.
-If a user asks for pricing, say that projects are bespoke and suggest they fill out the contact form for a quote.
-Maintain a futuristic, tech-savvy, yet approachable persona.
-Do not make up fake employees or specific office addresses unless generic.
+هدف شما این است که مفید، حرفه‌ای و خلاصه پاسخ دهید.
+به زبان فارسی سلیس و روان صحبت کنید.
+به سوالات درباره خدمات صالتک پاسخ دهید.
+اگر کاربری درباره قیمت پرسید، بگویید که پروژه‌ها اختصاصی هستند و پیشنهاد دهید فرم تماس را برای دریافت پیش‌فاکتور پر کنند.
+شخصیتی آینده‌نگر، تکنولوژی‌محور و در عین حال صمیمی داشته باشید.
+از ساختن کارمندان خیالی یا آدرس‌های خیلی دقیق (مگر آدرس‌های عمومی دفتر) خودداری کنید.
 `;
 
 let aiClient: GoogleGenAI | null = null;
@@ -33,10 +34,6 @@ export const sendMessageToSal = async (history: {role: 'user'|'model', text: str
   try {
     const ai = getAiClient();
     
-    // Convert history to format if needed, but for single turn or short context we can just use chat
-    // For simplicity in this demo, we'll start a new chat or keep context light
-    // To keep it robust, we will pass the history properly.
-    
     const chat = ai.chats.create({
       model: 'gemini-3-flash-preview',
       config: {
@@ -49,9 +46,9 @@ export const sendMessageToSal = async (history: {role: 'user'|'model', text: str
     });
 
     const result = await chat.sendMessage({ message: newMessage });
-    return result.text || "I'm having trouble processing that right now. Please try again.";
+    return result.text || "در حال حاضر در پردازش درخواست شما مشکلی دارم. لطفا دوباره تلاش کنید.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "I apologize, but I'm currently offline due to a network issue. Please use the contact form.";
+    return "متاسفم، به دلیل مشکل شبکه در حال حاضر آفلاین هستم. لطفا از فرم تماس استفاده کنید.";
   }
 };

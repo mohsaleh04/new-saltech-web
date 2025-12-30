@@ -6,9 +6,9 @@ const About: React.FC = () => {
     <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Intro */}
       <div className="text-center mb-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">We Are SalTech</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">ما صالتک هستیم</h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          A team of passionate engineers, designers, and strategists dedicated to redefining what's possible in the digital realm.
+          تیمی از مهندسان، طراحان و استراتژیست‌های مشتاق که متعهد به بازتعریف آنچه در دنیای دیجیتال ممکن است، هستند.
         </p>
       </div>
 
@@ -18,22 +18,22 @@ const About: React.FC = () => {
           <div className="w-16 h-16 mx-auto bg-accent/10 rounded-full flex items-center justify-center mb-6">
             <Target className="h-8 w-8 text-accent" />
           </div>
-          <h3 className="text-xl font-bold text-white mb-4">Our Mission</h3>
-          <p className="text-gray-400">To empower businesses with technology that is not just functional, but transformative.</p>
+          <h3 className="text-xl font-bold text-white mb-4">ماموریت ما</h3>
+          <p className="text-gray-400">توانمندسازی کسب‌وکارها با فناوری‌هایی که نه تنها کاربردی، بلکه تحول‌آفرین هستند.</p>
         </div>
         <div className="text-center">
           <div className="w-16 h-16 mx-auto bg-accent/10 rounded-full flex items-center justify-center mb-6">
             <Zap className="h-8 w-8 text-accent" />
           </div>
-          <h3 className="text-xl font-bold text-white mb-4">Innovation</h3>
-          <p className="text-gray-400">We stay ahead of the curve, constantly exploring new frameworks, AI models, and architectures.</p>
+          <h3 className="text-xl font-bold text-white mb-4">نوآوری</h3>
+          <p className="text-gray-400">ما همیشه پیشرو هستیم و دائماً فریم‌ورک‌های جدید، مدل‌های هوش مصنوعی و معماری‌های نوین را بررسی می‌کنیم.</p>
         </div>
         <div className="text-center">
           <div className="w-16 h-16 mx-auto bg-accent/10 rounded-full flex items-center justify-center mb-6">
             <Users className="h-8 w-8 text-accent" />
           </div>
-          <h3 className="text-xl font-bold text-white mb-4">Collaboration</h3>
-          <p className="text-gray-400">We work alongside our clients as partners, ensuring transparency and aligned goals.</p>
+          <h3 className="text-xl font-bold text-white mb-4">همکاری</h3>
+          <p className="text-gray-400">ما در کنار مشتریانمان به عنوان شریک کار می‌کنیم و شفافیت و اهداف همسو را تضمین می‌کنیم.</p>
         </div>
       </div>
 
@@ -41,12 +41,12 @@ const About: React.FC = () => {
       <div className="bg-primary-light border border-white/5 rounded-3xl p-8 md:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">داستان ما</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Founded in 2020, SalTech began as a small collective of freelance developers in Tehran. We shared a common vision: the local tech landscape needed a provider that prioritized code quality and user experience above all else.
+              صالتک در سال ۱۳۹۹ به عنوان گروه کوچکی از توسعه‌دهندگان فریلنسر در تهران تاسیس شد. ما یک چشم‌انداز مشترک داشتیم: فضای فناوری محلی به ارائه‌دهنده‌ای نیاز داشت که کیفیت کد و تجربه کاربری را بالاتر از هر چیز دیگری قرار دهد.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Today, we have grown into a full-service agency with clients ranging from innovative startups to established enterprises. Despite our growth, we maintain our startup spirit—agile, hungry, and obsessed with excellence.
+              امروز، ما به یک آژانس خدمات کامل تبدیل شده‌ایم که مشتریانی از استارتاپ‌های نوآور تا شرکت‌های بزرگ دارد. با وجود رشد ما، روحیه استارتاپی خود را حفظ کرده‌ایم: چابک، تشنه یادگیری و وسواس‌گونه نسبت به عالی بودن.
             </p>
           </div>
           <div className="relative">

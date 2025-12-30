@@ -6,7 +6,7 @@ import { ChatMessage } from '../types';
 const AIChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: 'Hello! I\'m Sal, your virtual assistant. How can I help you navigate SalTech\'s services today?' }
+    { role: 'model', text: 'سلام! من «صال» هستم، دستیار مجازی شما. چطور می‌توانم امروز در شناخت خدمات صالتک به شما کمک کنم؟' }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -56,7 +56,7 @@ const AIChatBot: React.FC = () => {
           className="bg-accent hover:bg-accent-glow text-white p-4 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center justify-center group"
         >
           <MessageSquare className="h-6 w-6" />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-in-out whitespace-nowrap">Chat with Sal</span>
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:mr-2 transition-all duration-300 ease-in-out whitespace-nowrap">گفتگو با صال</span>
         </button>
       )}
 
@@ -64,19 +64,19 @@ const AIChatBot: React.FC = () => {
         <div className="bg-primary-light border border-white/10 rounded-2xl shadow-2xl w-80 sm:w-96 flex flex-col h-[500px] overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 space-x-reverse">
               <div className="bg-white/20 p-1.5 rounded-lg">
                 <Bot className="h-5 w-5 text-white" />
               </div>
               <div>
-                <h3 className="font-semibold text-white text-sm">SalTech Assistant</h3>
-                <div className="flex items-center space-x-1">
+                <h3 className="font-semibold text-white text-sm">دستیار صالتک</h3>
+                <div className="flex items-center space-x-1 space-x-reverse">
                   <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                  <span className="text-xs text-blue-100">Online</span>
+                  <span className="text-xs text-blue-100">آنلاین</span>
                 </div>
               </div>
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 space-x-reverse">
                <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">
                 <Minimize2 className="h-4 w-4" />
               </button>
@@ -91,8 +91,8 @@ const AIChatBot: React.FC = () => {
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className={`flex items-start space-x-2 ${
-                  msg.role === 'user' ? 'flex-row-reverse space-x-reverse' : 'flex-row'
+                className={`flex items-start gap-x-2 ${
+                  msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'
                 }`}
               >
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
@@ -103,8 +103,8 @@ const AIChatBot: React.FC = () => {
                 <div
                   className={`max-w-[80%] p-3 rounded-2xl text-sm ${
                     msg.role === 'user'
-                      ? 'bg-accent text-white rounded-tr-none'
-                      : 'bg-white/10 text-gray-200 rounded-tl-none'
+                      ? 'bg-accent text-white rounded-tl-none'
+                      : 'bg-white/10 text-gray-200 rounded-tr-none'
                   }`}
                 >
                   {msg.text}
@@ -112,9 +112,9 @@ const AIChatBot: React.FC = () => {
               </div>
             ))}
             {isLoading && (
-              <div className="flex items-center space-x-2 text-gray-400 text-xs ml-10">
+              <div className="flex items-center space-x-2 space-x-reverse text-gray-400 text-xs mr-10">
                 <Loader2 className="h-3 w-3 animate-spin" />
-                <span>Sal is typing...</span>
+                <span>صال در حال نوشتن...</span>
               </div>
             )}
             <div ref={messagesEndRef} />
@@ -128,19 +128,19 @@ const AIChatBot: React.FC = () => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyPress}
-                placeholder="Ask about our services..."
-                className="w-full bg-primary border border-white/10 rounded-full pl-4 pr-12 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
+                placeholder="درباره خدمات ما بپرسید..."
+                className="w-full bg-primary border border-white/10 rounded-full pr-4 pl-12 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
               />
               <button
                 onClick={handleSend}
                 disabled={isLoading || !inputValue.trim()}
-                className="absolute right-2 top-2 p-1.5 bg-accent text-white rounded-full hover:bg-accent-glow disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="absolute left-2 top-2 p-1.5 bg-accent text-white rounded-full hover:bg-accent-glow disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
-                <Send className="h-4 w-4" />
+                <Send className="h-4 w-4 rotate-180" />
               </button>
             </div>
             <div className="text-center mt-2">
-              <p className="text-[10px] text-gray-500">Powered by Gemini AI</p>
+              <p className="text-[10px] text-gray-500">قدرت گرفته از هوش مصنوعی جمنای</p>
             </div>
           </div>
         </div>

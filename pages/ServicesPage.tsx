@@ -5,41 +5,41 @@ const ServicesPage: React.FC = () => {
   const services = [
     {
       icon: <Globe className="h-8 w-8 text-accent" />,
-      title: 'Web Development',
-      description: 'Custom web applications built with React, Next.js, and Node.js. We focus on SEO, performance, and accessibility.'
+      title: 'توسعه وب',
+      description: 'وب‌اپلیکیشن‌های اختصاصی ساخته شده با React، Next.js و Node.js. ما بر سئو، عملکرد و دسترس‌پذیری تمرکز داریم.'
     },
     {
       icon: <Smartphone className="h-8 w-8 text-accent" />,
-      title: 'Mobile Apps',
-      description: 'Native iOS and Android development using Swift, Kotlin, or React Native for cross-platform efficiency.'
+      title: 'اپلیکیشن موبایل',
+      description: 'توسعه نیتیو iOS و Android با استفاده از Swift، Kotlin یا React Native برای کارایی چند پلتفرمی.'
     },
     {
       icon: <Cloud className="h-8 w-8 text-accent" />,
-      title: 'Cloud Solutions',
-      description: 'Serverless architectures, containerization (Docker/Kubernetes), and scalable infrastructure on AWS/GCP.'
+      title: 'راهکارهای ابری',
+      description: 'معماری‌های بدون سرور (Serverless)، کانتینرسازی (Docker/Kubernetes) و زیرساخت مقیاس‌پذیر در AWS/GCP.'
     },
     {
       icon: <Brain className="h-8 w-8 text-accent" />,
-      title: 'AI & Machine Learning',
-      description: 'Integration of LLMs (like Gemini), predictive analytics, and computer vision to automate business processes.'
+      title: 'هوش مصنوعی و یادگیری ماشین',
+      description: 'یکپارچه‌سازی مدل‌های زبانی بزرگ (مانند Gemini)، تحلیل‌های پیش‌بینانه و بینایی ماشین برای خودکارسازی فرآیندها.'
     },
     {
       icon: <Shield className="h-8 w-8 text-accent" />,
-      title: 'Cybersecurity',
-      description: 'Security audits, penetration testing, and secure coding practices to protect your data and users.'
+      title: 'امنیت سایبری',
+      description: 'ممیزی امنیتی، تست نفوذ و شیوه‌های کدنویسی امن برای محافظت از داده‌ها و کاربران شما.'
     },
     {
       icon: <Database className="h-8 w-8 text-accent" />,
-      title: 'Big Data',
-      description: 'Data warehousing, ETL pipelines, and visualization dashboards to turn data into actionable insights.'
+      title: 'کلان‌داده (Big Data)',
+      description: 'انبار داده‌ها، خطوط لوله ETL و داشبوردهای مصورسازی برای تبدیل داده‌ها به بینش‌های عملی.'
     }
   ];
 
   return (
     <div className="min-h-screen pt-24 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h1>
-        <p className="text-gray-400 max-w-2xl mx-auto">We provide end-to-end technology solutions designed to scale with your business.</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">خدمات ما</h1>
+        <p className="text-gray-400 max-w-2xl mx-auto">ما راهکارهای فناوری پایان‌به‌پایان را طراحی می‌کنیم که همگام با کسب‌وکار شما رشد کنند.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
